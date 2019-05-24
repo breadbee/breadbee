@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# spinor
+#
+DEF spinor U 0 40 Y Y 1 F N
+F0 "U" 0 50 50 H V C CNN
+F1 "spinor" 0 -50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -400 300 400 -300 0 1 0 N
+X ~cs 1 600 100 200 L 50 50 1 1 I
+X miso 2 -600 0 200 R 50 50 1 1 O
+X ~wp 3 600 0 200 L 50 50 1 1 I
+X gnd 4 0 -500 200 U 50 50 1 1 W
+X mosi 5 -600 100 200 R 50 50 1 1 I
+X sck 6 -600 -100 200 R 50 50 1 1 I
+X ~hold 7 600 -100 200 L 50 50 1 1 I
+X vdd 8 0 500 200 D 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library

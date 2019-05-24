@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# tvsarray
+#
+DEF tvsarray U 0 40 Y Y 1 F N
+F0 "U" 0 -50 50 H V C CNN
+F1 "tvsarray" 0 50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -350 250 350 -250 0 1 0 N
+X io1 1 450 150 100 L 50 50 1 1 I
+X gnd 2 0 -350 100 U 50 50 1 1 I
+X io3 3 450 -50 100 L 50 50 1 1 I
+X io4 4 450 -150 100 L 50 50 1 1 I
+X vcc 5 0 350 100 D 50 50 1 1 I
+X io2 6 450 50 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
