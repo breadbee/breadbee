@@ -10,7 +10,7 @@ station. With a small adapter socket it can be mounted vertically in a standard 
 
 J2 - Main 2.54mm header
 
-|  function |  # |  # | function  |
+|    name   |  # |  # |   name    |
 |-----------|----|----|-----------|
 |    +5v    |  1 | 2  |   +3v3    |
 |    gnd    |  3 | 4  | pm_gpio4  |
