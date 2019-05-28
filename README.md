@@ -56,6 +56,7 @@ J2 - Main 2.54mm header
 J4 - Misc/High speed interfaces
 
 | name      | #  |
+|-----------|----|
 | +3v3      | 1  |
 | sd_d3     | 2  |
 | sd_d2     | 3  |
