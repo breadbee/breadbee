@@ -52,3 +52,28 @@ J2 - Main 2.54mm header
 |               | sr_io7    | 19 | 20 | sr_io6    |               |           |
 |               | sr_io5    | 21 | 22 | sr_io4    |               |           |
 |               | sr_io3    | 23 | 24 | sr_io2    |               |           |
+
+J4 - Misc/High speed interfaces
+
+| name      | #  |
+| +3v3      | 1  |
+| sd_d3     | 2  |
+| sd_d2     | 3  |
+| sd_d1     | 4  |
+| sd_d0     | 5  |
+| sd_cmd    | 6  |
+| sd_clk    | 7  |
+| pm_sd_cdz | 8  | 
+| gnd       | 9  |
+| +5v       | 10 |
+| usb_dm    | 11 |
+| usb_dp    | 12 | 
+| gnd       | 13 |
+| sr_io15   | 14 |
+| sr_io14   | 15 |
+| sr_io13   | 16 |
+| sr_io12   | 17 |
+| sr_io11   | 18 |
+| sr_io10   | 19 |
+| sr_io9    | 20 |
+| sr_io8    | 21 |
