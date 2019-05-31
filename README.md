@@ -78,3 +78,5 @@ J4 - Misc/High speed interfaces
 | sr_io10   | 19 |
 | sr_io9    | 20 |
 | sr_io8    | 21 |
+
+## Using JTAG
