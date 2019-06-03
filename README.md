@@ -34,6 +34,28 @@ These are features that are working:
  - Maybe 4 or 7 PWM channels. The registers exist but the output isn't working so far.
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
 
+## Software
+
+Note that this is all in flux right at the moment. These repos are getting rebase'd fairly often.
+
+### U-boot
+
+This is WIP but close. Uboot will replace all of the vendor blobs.
+
+https://github.com/fifteenhex/u-boot/tree/msc313
+
+### Kernel
+
+All of the above features work except for ethernet that is currently broken since rebase'ing on 5.1.
+
+https://github.com/fifteenhex/linux/tree/msc313e
+
+### Buildroot
+
+Combines the u-boot and kernel above with a root filesystem and generates flashable (not yet!) images.
+
+https://github.com/fifteenhex/breadbee_buildroot
+
 ## Pin Table
 
 J2 - Main 2.54mm header
