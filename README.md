@@ -102,3 +102,5 @@ J4 - Misc/High speed interfaces
 | sr_io8    | 21 |
 
 ## Using JTAG
+
+JTAG is enabled at boot up on the spi0 pins.
