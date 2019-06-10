@@ -1,0 +1,5 @@
+0:3FFF env
+4000:FFFF ipl_uboot_spl
+10000:7FFFF uboot
+80000:37FFFF  kernel
+380000:FFFFFF rootfs
