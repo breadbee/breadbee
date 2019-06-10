@@ -14,7 +14,7 @@ These are features that are working:
 - 64MB DDR2
 - Bootable, memory mapped SPI-NOR
 - 100Mbit ethernet.
-- 4 ADC channels
+- 4 x 10bit ADC channels
 - 2 x SPI
 - 1 x I2C (there is possibly one more)
 - 4 UARTs (max 3 usable at once)
@@ -40,19 +40,20 @@ Note that this is all in flux right at the moment. These repos are getting rebas
 
 ### U-boot
 
-This is WIP but close. Uboot will replace all of the vendor blobs.
+There is a basic port of u-boot that so far take over from the MStar IPL and load a kernel from the SPI NOR, write it etc.
+See boot process below for more details.
 
 https://github.com/fifteenhex/u-boot/tree/msc313
 
 ### Kernel
 
-All of the above features work except for ethernet that is currently broken since rebase'ing on 5.1.
+All of the above features work to some degree.
 
 https://github.com/fifteenhex/linux/tree/msc313e
 
 ### Buildroot
 
-Combines the u-boot and kernel above with a root filesystem and generates flashable (not yet!) images.
+Combines the u-boot and kernel above with a root filesystem and generates flashable images.
 
 https://github.com/fifteenhex/breadbee_buildroot
 
@@ -103,4 +104,26 @@ J4 - Misc/High speed interfaces
 
 ## Using JTAG
 
-JTAG is enabled at boot up on the spi0 pins.
+JTAG is enabled at boot up on the spi0 pins by the u-boot SPL.
+
+## Boot process
+
+The standard MStar boot process is like this:
+- Start the boot rom that is baked into the chip
+- Load the "IPL" from SPI NOR into internal SRAM
+- Jump into the IPL
+- The IPL then does DRAM setup and tries to load "IPL_CUST" from SPI NOR or somewhere else if that fails
+- IPL_CUST does a bunch of higher level stuff and then loads an XZ compressed u-boot image into DRAM and starts it
+
+The ideal boot process would be:
+
+- Start the boot rom that is baked into the chip
+- Load the u-boot SPL
+- u-boot SPL does DRAM setup and loads the main u-boot from SPI NOR into DRAM and starts it.
+
+Unfortunately the DRAM setup process isn't understood yet. So the actual boot process is:
+
+- Start the boot rom that is baked into the chip
+- Load the IPL
+- Trick the IPL into loading the u-boot SPL as IPL_CUST into DRAM (IPL_CUST is limited to 64K so we still need the SPL)
+- SPL loads the main u-boot and starts it.
