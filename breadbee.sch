@@ -443,19 +443,19 @@ Text Label 7500 3750 2    50   ~ 0
 spi0_do
 Wire Wire Line
 	6600 3850 6100 3850
-Text Label 7500 3850 2    50   ~ 0
+Text Label 7500 3950 2    50   ~ 0
 sar_gpio0
 Wire Wire Line
 	7100 3850 7500 3850
-Text Label 6100 3850 0    50   ~ 0
+Text Label 6100 3950 0    50   ~ 0
 sar_gpio1
 Wire Wire Line
 	6600 3950 6100 3950
-Text Label 6100 3950 0    50   ~ 0
+Text Label 6100 3850 0    50   ~ 0
 sar_gpio2
 Wire Wire Line
 	7100 3950 7500 3950
-Text Label 7500 3950 2    50   ~ 0
+Text Label 7500 3850 2    50   ~ 0
 sar_gpio3
 Wire Wire Line
 	6600 4050 6100 4050
@@ -733,20 +733,20 @@ spi0_di
 Text Label 900  4500 0    50   ~ 0
 spi0_do
 Wire Wire Line
-	3700 3400 4200 3400
-Wire Wire Line
-	3700 3500 4200 3500
+	3700 3700 4200 3700
 Wire Wire Line
 	3700 3600 4200 3600
 Wire Wire Line
-	3700 3700 4200 3700
-Text Label 4200 3400 2    50   ~ 0
-sar_gpio0
-Text Label 4200 3500 2    50   ~ 0
-sar_gpio1
-Text Label 4200 3600 2    50   ~ 0
-sar_gpio2
+	3700 3500 4200 3500
+Wire Wire Line
+	3700 3400 4200 3400
 Text Label 4200 3700 2    50   ~ 0
+sar_gpio0
+Text Label 4200 3600 2    50   ~ 0
+sar_gpio1
+Text Label 4200 3500 2    50   ~ 0
+sar_gpio2
+Text Label 4200 3400 2    50   ~ 0
 sar_gpio3
 Wire Wire Line
 	900  3700 1400 3700
