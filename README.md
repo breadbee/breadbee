@@ -59,7 +59,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ## Pin Table
 
-J2 - Main 2.54mm header
+### J2 - Main 2.54mm header
 
 | alt functions |    name   |  # |  # |   name    | alt functions |   notes   |
 |---------------|-----------|----|----|-----------|---------------|-----------|
@@ -76,7 +76,7 @@ J2 - Main 2.54mm header
 |               | sr_io5    | 21 | 22 | sr_io4    |               |           |
 |               | sr_io3    | 23 | 24 | sr_io2    |               |           |
 
-J4 - Misc/High speed interfaces
+### J4 - Misc/High speed interfaces
 
 | name      | #  |
 |-----------|----|
