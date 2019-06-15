@@ -29,7 +29,7 @@ These are features that are working:
  - USB
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
- - Crypto engine that seems to be able to doAES encrypted DMA transfers, memory mapped AES encryption etc
+ - Crypto engine that seems to be able to do　AES encrypted DMA transfers, memory mapped AES encryption etc
  - 8051 low power mode management MCU
  - Maybe 4 or 7 PWM channels. The registers exist but the output isn't working so far.
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
@@ -101,6 +101,11 @@ J4 - Misc/High speed interfaces
 | sr_io10   | 19 |
 | sr_io9    | 20 |
 | sr_io8    | 21 |
+
+### Test Points
+
+- The audio pins are broken out to a series of test points on the left side of the parts size of the board.
+- pm_irin is broken out to a test point on the ethernet jack side of the board.
 
 ## Using JTAG
 
