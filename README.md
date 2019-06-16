@@ -17,7 +17,7 @@ These are features that are working:
 - 4 x 10bit ADC channels
 - 2 x SPI
 - 1 x I2C (there is possibly one more)
-- 4 UARTs (max 3 usable at once)
+- 3 or 4 UARTs (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
 - Lots of GPIO. At least one with interrupt support.
 - RTC
 - WDT
