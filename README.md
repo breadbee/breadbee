@@ -22,6 +22,7 @@ These are features that are working:
 - RTC
 - WDT
 - 3 x Timer
+- 4 x PWM. Possibly 7
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
@@ -31,7 +32,6 @@ These are features that are working:
  - Audio ADC/DAC
  - Crypto engine that seems to be able to do　AES encrypted DMA transfers, memory mapped AES encryption etc
  - 8051 low power mode management MCU
- - Maybe 4 or 7 PWM channels. The registers exist but the output isn't working so far.
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
 
 ## Software
@@ -70,8 +70,8 @@ https://github.com/fifteenhex/breadbee_buildroot
 |             |           |     ej_tdo    | spi0_di   |  9 | 10 | spi0_do   |    ej_tdi     |           |             |
 |     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |
 |     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |
-|     yes     |           |    spi0_cz    | fuart_rx  | 15 | 16 | fuart_tx  |    spi0_ck    |           |    yes      |
-|     yes     |           |    spi0_di    | fuart_cts | 17 | 18 | fuart_rts |    spi0_do    |           |    yes      |
+|     yes     |           | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |           |    yes      |
+|     yes     |           | spi0_di, pwm2 | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3 |           |    yes      |
 |             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |
 |             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |
 |             |           |               | sr_io3    | 23 | 24 | sr_io2    |               |           |             |
