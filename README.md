@@ -34,6 +34,10 @@ These are features that are working:
  - Maybe 4 or 7 PWM channels. The registers exist but the output isn't working so far.
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
 
+
+![PWM blinky](blinky.gif)
+
+
 ## Software
 
 Note that this is all in flux right at the moment. These repos are getting rebase'd fairly often.
