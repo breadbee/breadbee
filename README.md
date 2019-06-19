@@ -22,7 +22,7 @@ These are features that are working:
 - RTC
 - WDT
 - 3 x Timer
-- 4 x PWM. Possibly 7, only 2 work so far because their pinmux settings aren't known.
+- 4 x PWM. Possibly 7.
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
