@@ -38,13 +38,15 @@ These are features that are working:
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
 
 
+It's full of flashy magic!
+
 ![PWM blinky](blinky.gif)
 
 ## Motivations
 
 - Networked microcontrollers are a disaster waiting to happen; Many solutions - even commercial ones - use LWIP as the TCP/IP stack with no intention of actually maintaining it, use relatively unknown TLS libraries because of lack of memory, have no memory protection, no isolation between the moving parts.
 
-- There are no solutions yet that can run a real OS like Linux that can be integrated by hobbyists into cheap boards from PCB vendors that don't have show stopping limitations. I.e. the AllWinner V3s is very similar to the SoC used here but it only has one SPI controller that is lost as soon as you put SPI NOR on it. The MSC313E has just enough of the usual microcontroller peripherals to make it useful, comes in a (relatively) easy to work with QFN package, is tiny and costs ~$4.
+- There are no solutions yet that can run a real OS like Linux that can be integrated by hobbyists into boards from cheap PCB vendors that don't have show stopping limitations. I.e. the AllWinner V3s is very similar to the SoC used here but it only has one SPI controller that is lost as soon as you put SPI NOR on it. The MSC313E has just enough of the usual microcontroller peripherals to make it useful, comes in a (relatively) easy to work with QFN package, is tiny and costs ~$4.
 It is a bit harder to integrate into your designs than a microcontroller that requires a single power supply but all of the information you would need to do so is right here. The schematic for the breadbee incredibly simple.
 
 - There are single board computers out there that have more cores, more memory etc and are still around $10 but they are over kill for applications where even an ESP32 has enough horse power and they aren't usually something you can integrate into your project without reserving considerable space.
@@ -54,6 +56,14 @@ It is a bit harder to integrate into your designs than a microcontroller that re
 ## But where's the WiFi!>!!111
 
 The breadbee is meant to be a "minimum viable product" to get the ball rolling. It's impossible to write drivers for the SDIO controller or USB needed for WiFi without a platform to work on. Breadbee is that platform. Once SDIO works there will be an Ampak AP6212 based module to add wifi to breadbees and maybe a respin of the breadbee with the ethernet jack replaced with an Ampak module. 
+
+## Can I have one.. where do I get the chips..
+
+- If you ask very nicely and you are willing to do something like write a nice python library or flesh out drivers for the board it's possible you can have one of the prototype boards for FREE! Get in touch!
+
+- If you just want to buy one the intention is to put the board up on a crowd sourcing site at some point. When that happens that information will be here.
+
+- If you want chips to integrate into your own projects and don't have contacts in Shenzhen to get them get in touch and we'll figure something out. If you want 2080 of them getting them isn't a problem. If you want one or two I have a small supply. If the crowd sourcing happens and there is enough money left to buy extra chips to distribute in more accessible ways I will.
 
 ## Software
 
@@ -75,6 +85,7 @@ https://github.com/fifteenhex/linux/tree/msc313e
 ### Buildroot
 
 Combines the u-boot and kernel above with a root filesystem and generates flashable images.
+There are some small peices of a board configuration application called "beecfg" to setup pinmuxing etc.
 
 https://github.com/fifteenhex/breadbee_buildroot
 
