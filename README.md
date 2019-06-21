@@ -4,6 +4,9 @@ A very small, 32mm x 30mm, ARM Cortex A7 development board that costs about ~$10
 to make in low quantities and can be assembled at home with a cheap hot air rework
 station. With a small adapter socket it can be mounted vertically in a standard breadboard.
 
+The breadbee is based on a relatively unknown IP camera SoC, the MSC313E, from a company called MStar.
+You might have never heard of MStar but you probably have one of their chips in your TV.
+
 ![Breadbee number one](photos/jackside_small.jpg)
 
 ## Features
@@ -36,6 +39,17 @@ These are features that are working:
 
 
 ![PWM blinky](blinky.gif)
+
+## Motivations
+
+- Networked microcontrollers are a disaster waiting to happen; Many solutions - even commercial ones - use LWIP as the TCP/IP stack with no intention of actually maintaining it, use relatively unknown TLS libraries because of lack of memory, have no memory protection, no isolation between the moving parts.
+
+- There are no solutions yet that can run a real OS like Linux that can't be integrated by hobbyists into cheap boards from PCB vendors that don't have show stopping limitations. I.e. the AllWinner V3s is very similar to the SoC used here but it only has one SPI controller that is lost as soon as you put SPI NOR on it. The MSC313E has just enough of the usual microcontroller peripherals to make it useful, comes in a (relatively) easy to work with QFN package, is tiny and costs ~$4.
+It is a bit harder to integrate into your designs than a microcontroller that requires a single power supply but all of the information you would need to do so is right here. The schematic for the breadbee incredibly simple.
+
+- There are single board computers out there that have more cores, more memory etc and are still around $10 but they are over kill for applications where even an ESP32 has enough horse power and they aren't usually something you can integrate into your project without reserving considerable space.
+
+- Why not? The MSC313E is a Cortex-A so getting Linux running from scratch was relatively simple. The peripherals are super weird in places but not totally insane.
 
 
 ## Software
