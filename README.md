@@ -96,7 +96,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 | 5v tolerant |   notes   | alt functions |    name   |  # |  # |   name    | alt functions |   notes   | 5v tolerant |
 |-------------|-----------|---------------|-----------|----|----|-----------|---------------|-----------|-------------|
 |             |           |               |    +5v    |  1 | 2  |   +3v3    |               |           |             |
-|             |           |               |    gnd    |  3 | 4  | pm_gpio4  |               | interrupt |             |
+|             |           |               |    gnd    |  3 | 4  | pm_gpio4  |               | [0]       |    yes      |
 |             |           |               | i2c1_scl  |  5 | 6  | i2c1_sda  |               |           |             |
 |             |           |     ej_tck    | spi0_cz   |  7 | 8  | spi0_ck   |    ej_tms     |           |             |
 |             |           |     ej_tdo    | spi0_di   |  9 | 10 | spi0_do   |    ej_tdi     |           |             |
@@ -107,6 +107,8 @@ https://github.com/fifteenhex/breadbee_buildroot
 |             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |
 |             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |
 |             |           |               | sr_io3    | 23 | 24 | sr_io2    |               |           |             |
+
+0 - interrupt, might be input only.
 
 ### J4 - Misc/High speed interfaces
 
