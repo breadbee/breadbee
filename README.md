@@ -33,10 +33,10 @@ These are features that are working:
  - USB
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
- - Crypto engine that seems to be able to do　AES encrypted DMA transfers, memory mapped AES encryption etc
+ - Crypto engine that seems to be able to do AES encrypted DMA transfers, memory mapped AES encryption etc
  - 8051 low power mode management MCU
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
-
+ - 6 byte unique device ID and efuse for key storage
 
 It's full of flashy magic!
 
