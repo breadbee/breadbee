@@ -25,7 +25,7 @@ These are features that are working:
 - RTC
 - WDT
 - 3 x Timer
-- 4 x PWM. Possibly 7.
+- 8 x PWM.
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
@@ -98,8 +98,8 @@ https://github.com/fifteenhex/breadbee_buildroot
 |             |           |               |    +5v    |  1 | 2  |   +3v3    |               |           |             |
 |             |           |               |    gnd    |  3 | 4  | pm_gpio4  |               | [0]       |    yes      |
 |             |           |               | i2c1_scl  |  5 | 6  | i2c1_sda  |               |           |             |
-|             |           |     ej_tck    | spi0_cz   |  7 | 8  | spi0_ck   |    ej_tms     |           |             |
-|             |           |     ej_tdo    | spi0_di   |  9 | 10 | spi0_do   |    ej_tdi     |           |             |
+|             |           | ej_tck, pwm4  | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5  |           |             |
+|             |           | ej_tdo, pwm6  | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7  |           |             |
 |     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |
 |     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |
 |     yes     |           | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |           |    yes      |
