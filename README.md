@@ -2,7 +2,7 @@
 
 A very small, 32mm x 30mm, ARM Cortex A7 development board that costs about ~$10
 to make in low quantities and can be assembled at home with a cheap hot air rework
-station. With a [small adapter socket](small adapter socket) it can be mounted vertically in a standard breadboard.
+station. With a [small adapter socket](./hivee) it can be mounted vertically in a standard breadboard.
 
 The breadbee is based on a relatively unknown IP camera SoC, the MSC313E, from a company called MStar.
 You might have never heard of MStar but you probably have one of their chips in your TV.
