@@ -15,17 +15,17 @@ These are features that are working:
 
 - ~1GHz Cortex A7 CPU with NEON etc. Note MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 - 64MB DDR2
-- [Bootable, memory mapped SPI-NOR|https://github.com/fifteenhex/linux/blob/msc313e/drivers/mtd/spi-nor/msc313e-spinor.c]
+- [Bootable, memory mapped SPI-NOR](https://github.com/fifteenhex/linux/blob/msc313e/drivers/mtd/spi-nor/msc313e-spinor.c)
 - 100Mbit ethernet.
-- [4 x 10bit ADC channels|https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c]
-- [2 x SPI|https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313.c]
-- [1 x I2C (there is possibly one more)|https://github.com/fifteenhex/linux/blob/msc313e/drivers/i2c/busses/i2c-msc313e.c]
+- [4 x 10bit ADC channels](https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c)
+- [2 x SPI](https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313.c)
+- [1 x I2C (there is possibly one more)](https://github.com/fifteenhex/linux/blob/msc313e/drivers/i2c/busses/i2c-msc313e.c)
 - 3 or 4 UARTs (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
 - Lots of GPIO. At least one with interrupt support.
-- [RTC|https://github.com/fifteenhex/linux/blob/msc313e/drivers/rtc/rtc-msc313e.c]
-- [WDT|https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c]
-- [3 x Timer|https://github.com/fifteenhex/linux/blob/msc313e/drivers/clocksource/timer-msc313e.c]
-- [8 x PWM|https://github.com/fifteenhex/linux/blob/msc313e/drivers/pwm/pwm-msc313e.c]
+- [RTC](https://github.com/fifteenhex/linux/blob/msc313e/drivers/rtc/rtc-msc313e.c)
+- [WDT](https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c)
+- [3 x Timer](https://github.com/fifteenhex/linux/blob/msc313e/drivers/clocksource/timer-msc313e.c)
+- [8 x PWM](https://github.com/fifteenhex/linux/blob/msc313e/drivers/pwm/pwm-msc313e.c)
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
