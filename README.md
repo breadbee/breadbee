@@ -33,7 +33,7 @@ These are features that are working:
  - USB
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
- - Crypto engine that seems to be able to do AES encrypted DMA transfers, memory mapped AES encryption etc
+ - [Crypto engine](https://github.com/fifteenhex/linux/blob/msc313e/drivers/crypto/msc313-aesdma.c) that seems to be able to do AES encrypted DMA transfers, memory mapped AES encryption etc
  - 8051 low power mode management MCU
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
  - 6 byte unique device ID and efuse for key storage
@@ -112,29 +112,29 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ### J4 - Misc/High speed interfaces
 
-| name      | #  | alt functions | 5v tolerant |
-|-----------|----|---------------|-------------|
-| +3v3      | 1  |               |             |
-| sd_d3     | 2  |   spi1_do     | yes         |
-| sd_d2     | 3  |   spi1_di     | yes         |
-| sd_d1     | 4  |   spi1_ck     | yes         |
-| sd_d0     | 5  |   spi1_cz     | yes         |
-| sd_cmd    | 6  |               |             |
-| sd_clk    | 7  |               |             |
-| pm_sd_cdz | 8  |               |             |
-| gnd       | 9  |               |             |
-| +5v       | 10 |               |             |
-| usb_dm    | 11 |               |             |
-| usb_dp    | 12 |               |             |
-| gnd       | 13 |               |             |
-| sr_io15   | 14 |               |             |
-| sr_io14   | 15 |               |             |
-| sr_io13   | 16 |               |             |
-| sr_io12   | 17 |               |             |
-| sr_io11   | 18 |               |             |
-| sr_io10   | 19 |               |             |
-| sr_io9    | 20 |               |             |
-| sr_io8    | 21 |               |             |
+| name      | #  | alt functions | 5v tolerant | notes |
+|-----------|----|---------------|-------------|-------|
+| +3v3      | 1  |               |             |       |
+| sd_d3     | 2  |   spi1_do     | yes         |       |
+| sd_d2     | 3  |   spi1_di     | yes         |       |
+| sd_d1     | 4  |   spi1_ck     | yes         |       |
+| sd_d0     | 5  |   spi1_cz     | yes         |       |
+| sd_cmd    | 6  |               | yes         |       |
+| sd_clk    | 7  |               | yes         |       |
+| pm_sd_cdz | 8  |               |             |       |
+| gnd       | 9  |               |             |       |
+| +5v       | 10 |               |             |       |
+| usb_dm    | 11 |               |             |       |
+| usb_dp    | 12 |               |             |       |
+| gnd       | 13 |               |             |       |
+| sr_io15   | 14 |               |             |       |
+| sr_io14   | 15 |               |             |       |
+| sr_io13   | 16 |               |             |       |
+| sr_io12   | 17 |               |             |       |
+| sr_io11   | 18 |               |             |       |
+| sr_io10   | 19 |               |             |       |
+| sr_io9    | 20 |               |             |       |
+| sr_io8    | 21 |               |             |       |
 
 ### Test Points
 
