@@ -29,7 +29,7 @@ These are features that are working:
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
- - SD/SDIO interface
+ - [SD/SDIO interface](https://github.com/fifteenhex/linux/blob/msc313e/drivers/mmc/host/mstar-fcie.c)
  - USB
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
