@@ -15,6 +15,7 @@ These are features that are working:
 
 - ~1GHz Cortex A7 CPU with NEON etc. Note MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 - 64MB DDR2
+- 64KB (maybe more) SRAM 
 - [Bootable, memory mapped SPI-NOR](https://github.com/fifteenhex/linux/blob/msc313e/drivers/mtd/spi-nor/msc313e-spinor.c)
 - 100Mbit ethernet.
 - [4 x 10bit ADC channels](https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c)
