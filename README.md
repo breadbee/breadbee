@@ -102,7 +102,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 |             |           | ej_tdo, pwm6  | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7  |           |             |
 |     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |
 |     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |
-|     yes     |           | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |           |    yes      |
+|     yes     |   cs      | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |   clk     |    yes      |
 |     yes     |   mosi    | spi0_di, pwm2 | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3 |   miso    |    yes      |
 |             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |
 |             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |
@@ -115,10 +115,10 @@ https://github.com/fifteenhex/breadbee_buildroot
 | name      | #  | alt functions | 5v tolerant | notes |
 |-----------|----|---------------|-------------|-------|
 | +3v3      | 1  |               |             |       |
-| sd_d3     | 2  |   spi1_do     | yes         |       |
-| sd_d2     | 3  |   spi1_di     | yes         |       |
-| sd_d1     | 4  |   spi1_ck     | yes         |       |
-| sd_d0     | 5  |   spi1_cz     | yes         |       |
+| sd_d3     | 2  |   spi1_do     | yes         | miso  |
+| sd_d2     | 3  |   spi1_di     | yes         | mosi  |
+| sd_d1     | 4  |   spi1_ck     | yes         | clk   |
+| sd_d0     | 5  |   spi1_cz     | yes         | cs    |
 | sd_cmd    | 6  |               | yes         |       |
 | sd_clk    | 7  |               | yes         |       |
 | pm_sd_cdz | 8  |               |             |       |
