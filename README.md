@@ -39,6 +39,7 @@ These are features that are working:
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
  - 6 byte unique device ID and efuse for key storage
  - [block dma controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/dma/mstar/mstar-msc313-bdma.c)
+ - On die temperature sensor.
 
 It's full of flashy magic!
 
