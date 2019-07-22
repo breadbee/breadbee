@@ -13,7 +13,7 @@ You might have never heard of MStar but you probably have one of their chips in 
 
 These are features that are working:
 
-- ~1GHz Cortex A7 CPU with NEON etc. Note MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
+- ~1GHz Cortex A7 CPU with NEON etc[0].
 - 64MB DDR2
 - 64KB (maybe more) SRAM 
 - [Bootable, memory mapped SPI-NOR](https://github.com/fifteenhex/linux/blob/msc313e/drivers/mtd/spi-nor/msc313e-spinor.c)
@@ -27,6 +27,9 @@ These are features that are working:
 - [WDT](https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c)
 - [3 x Timer](https://github.com/fifteenhex/linux/blob/msc313e/drivers/clocksource/timer-msc313e.c)
 - [8 x PWM](https://github.com/fifteenhex/linux/blob/msc313e/drivers/pwm/pwm-msc313e.c)
+
+[0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
+Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
 
  The chip has a bunch of stuff in it that isn't supported yet:
  
