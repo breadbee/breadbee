@@ -42,6 +42,7 @@ Clocking up to 1.1GHz works fine running dhrystone for hours but causes random l
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
  - 6 byte unique device ID and efuse for key storage
  - [block dma controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/dma/mstar/mstar-msc313-bdma.c)
+ - [command queue dma controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/dma/mstar/mstar-msc313-cmdq.c)
  - On die temperature sensor.
 
 It's full of flashy magic!
