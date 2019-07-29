@@ -22,7 +22,7 @@ These are features that are working:
 - [2 x SPI](https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313.c)
 - [1 x I2C (there is possibly one more)](https://github.com/fifteenhex/linux/blob/msc313e/drivers/i2c/busses/i2c-msc313e.c)
 - 3 or 4 UARTs (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
-- Lots of GPIO. At least one with interrupt support.
+- Lots of GPIO. At least one with wake up support support.
 - [RTC](https://github.com/fifteenhex/linux/blob/msc313e/drivers/rtc/rtc-msc313e.c)
 - [WDT](https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c)
 - [3 x Timer](https://github.com/fifteenhex/linux/blob/msc313e/drivers/clocksource/timer-msc313e.c)
@@ -100,22 +100,22 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ### J2 - Main 2.54mm header
 
-| 5v tolerant |   notes   | alt functions |    name   |  # |  # |   name    | alt functions |   notes   | 5v tolerant |
-|-------------|-----------|---------------|-----------|----|----|-----------|---------------|-----------|-------------|
-|             |           |               |    +5v    |  1 | 2  |   +3v3    |               |           |             |
-|             |           |               |    gnd    |  3 | 4  | pm_gpio4  |               | [0]       |    yes      |
-|             |           |               | i2c1_scl  |  5 | 6  | i2c1_sda  |               |           |             |
-|             |           | ej_tck, pwm4  | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5  |           |             |
-|             |           | ej_tdo, pwm6  | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7  |           |             |
-|     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |
-|     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |
-|     yes     |   cs      | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |   clk     |    yes      |
-|     yes     |   mosi    | spi0_di, pwm2 | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3 |   miso    |    yes      |
-|             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |
-|             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |
-|             |           |               | sr_io3    | 23 | 24 | sr_io2    |               |           |             |
+| interrupt | 5v tolerant |   notes   | alt functions |    name   |  # |  # |   name    | alt functions |   notes   | 5v tolerant | interrupt |
+|-----------|-------------|-----------|---------------|-----------|----|----|-----------|---------------|-----------|-------------|-----------|
+|           |             |           |               |    +5v    |  1 | 2  |   +3v3    |               |           |             |           |
+|           |             |           |               |    gnd    |  3 | 4  | pm_gpio4  |               | [0]       |    yes      |   yes     |
+|           |             |           |               | i2c1_scl  |  5 | 6  | i2c1_sda  |               |           |             |           |
+|   yes     |             |           | ej_tck, pwm4  | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5  |           |             |   yes     |
+|   yes     |             |           | ej_tdo, pwm6  | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7  |           |             |   yes     |
+|           |     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |           |
+|           |     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |           |
+|           |     yes     |   cs      | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |   clk     |    yes      |           |
+|           |     yes     |   mosi    | spi0_di, pwm2 | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3 |   miso    |    yes      |           |
+|           |             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |           |
+|           |             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |           |
+|           |             |           |               | sr_io3    | 23 | 24 | sr_io2    |               |           |             |           |
 
-0 - interrupt, might be input only.
+0 - might be input only.
 
 ### J4 - Misc/High speed interfaces
 
