@@ -109,7 +109,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 |           |     yes     |           |               | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |           |
 |           |     yes     |           |               | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |           |
 |           |     yes     |   cs      | spi0_cz, pwm0 | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |   clk     |    yes      |           |
-|           |     yes     |   mosi    | spi0_di, pwm2 | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3 |   miso    |    yes      |           |
+|           |     yes     |   mosi    | spi0_di, pwm2, uart1_rx | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3, uart1_tx |   miso    |    yes      |           |
 |           |             |           |               | sr_io7    | 19 | 20 | sr_io6    |               |           |             |           |
 |           |             |           |               | sr_io5    | 21 | 22 | sr_io4    |               |           |             |           |
 |           |             |           |               | sr_io3    | 23 | 24 | sr_io2    |               |           |             |           |
