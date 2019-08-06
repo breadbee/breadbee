@@ -21,7 +21,7 @@ These are features that are working:
 - [4 x 10bit ADC channels](https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c)
 - [2 x SPI](https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313.c)
 - [1 x I2C (there is possibly one more)](https://github.com/fifteenhex/linux/blob/msc313e/drivers/i2c/busses/i2c-msc313e.c)
-- 3 or 4 UARTs (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
+- [3 or 4 UARTs](https://github.com/fifteenhex/linux/blob/b3c521f8f30c9cc6f9f9c5c87429336d4756dcca/drivers/tty/serial/8250/8250_dw.c#L751) (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
 - Lots of GPIO. At least one with wake up support.
 - [RTC](https://github.com/fifteenhex/linux/blob/msc313e/drivers/rtc/rtc-msc313e.c)
 - [WDT](https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c)
