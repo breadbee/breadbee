@@ -118,29 +118,29 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ### J4 - Misc/High speed interfaces
 
-| name      | #  | alt functions | 5v tolerant | notes |
-|-----------|----|---------------|-------------|-------|
-| +3v3      | 1  |               |             |       |
-| sd_d3     | 2  |   spi1_do     | yes         | miso  |
-| sd_d2     | 3  |   spi1_di     | yes         | mosi  |
-| sd_d1     | 4  |   spi1_ck     | yes         | clk   |
-| sd_d0     | 5  |   spi1_cz     | yes         | cs    |
-| sd_cmd    | 6  |               | yes         |       |
-| sd_clk    | 7  |               | yes         |       |
-| pm_sd_cdz | 8  |               |             |       |
-| gnd       | 9  |               |             |       |
-| +5v       | 10 |               |             |       |
-| usb_dm    | 11 |               |             |       |
-| usb_dp    | 12 |               |             |       |
-| gnd       | 13 |               |             |       |
-| sr_io15   | 14 |               |             |       |
-| sr_io14   | 15 |               |             |       |
-| sr_io13   | 16 |               |             |       |
-| sr_io12   | 17 |               |             |       |
-| sr_io11   | 18 |               |             |       |
-| sr_io10   | 19 |               |             |       |
-| sr_io9    | 20 |               |             |       |
-| sr_io8    | 21 |               |             |       |
+| name      | #  | alt functions | 5v tolerant | interrupt | notes |
+|-----------|----|---------------|-------------|-----------|-------|
+| +3v3      | 1  |               |             |           |       |
+| sd_d3     | 2  |   spi1_do     | yes         |           | miso  |
+| sd_d2     | 3  |   spi1_di     | yes         |           | mosi  |
+| sd_d1     | 4  |   spi1_ck     | yes         |           | clk   |
+| sd_d0     | 5  |   spi1_cz     | yes         |           | cs    |
+| sd_cmd    | 6  |               | yes         |           |       |
+| sd_clk    | 7  |               | yes         |           |       |
+| pm_sd_cdz | 8  |               |             | yes       |       |
+| gnd       | 9  |               |             |           |       |
+| +5v       | 10 |               |             |           |       |
+| usb_dm    | 11 |               |             |           |       |
+| usb_dp    | 12 |               |             |           |       |
+| gnd       | 13 |               |             |           |       |
+| sr_io15   | 14 |               |             |           |       |
+| sr_io14   | 15 |               |             |           |       |
+| sr_io13   | 16 |               |             |           |       |
+| sr_io12   | 17 |               |             |           |       |
+| sr_io11   | 18 |               |             |           |       |
+| sr_io10   | 19 |               |             |           |       |
+| sr_io9    | 20 |               |             |           |       |
+| sr_io8    | 21 |               |             |           |       |
 
 ### Test Points
 
