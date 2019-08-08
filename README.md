@@ -21,8 +21,8 @@ These are features that are working:
 - [4 x 10bit ADC channels](https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c)
 - [2 x SPI](https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313.c)
 - [1 x I2C (there is possibly one more)](https://github.com/fifteenhex/linux/blob/msc313e/drivers/i2c/busses/i2c-msc313e.c)
-- [3 or 4 UARTs](https://github.com/fifteenhex/linux/blob/b3c521f8f30c9cc6f9f9c5c87429336d4756dcca/drivers/tty/serial/8250/8250_dw.c#L751) (unsure if the pm_uart is the same as uart0) (max 2 or 3 usable at once due to pin muxing)
-- Lots of GPIO. At least one with wake up support.
+- [3 UARTs](https://github.com/fifteenhex/linux/blob/b3c521f8f30c9cc6f9f9c5c87429336d4756dcca/drivers/tty/serial/8250/8250_dw.c#L751) [1]
+- Lots of GPIO. At least one pin with wake up support.
 - [RTC](https://github.com/fifteenhex/linux/blob/msc313e/drivers/rtc/rtc-msc313e.c)
 - [WDT](https://github.com/fifteenhex/linux/blob/msc313e/drivers/watchdog/msc313e_wdt.c)
 - [3 x Timer](https://github.com/fifteenhex/linux/blob/msc313e/drivers/clocksource/timer-msc313e.c)
@@ -31,6 +31,7 @@ These are features that are working:
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
+[1] One UART is used by the serial console, two more are available via muxing. 
 
  The chip has a bunch of stuff in it that isn't supported yet:
  - USB
