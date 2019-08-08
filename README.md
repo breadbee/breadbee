@@ -116,6 +116,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 |           |             |           |                         | sr_io3    | 23 | 24 | sr_io2    |               |           |             |           |
 
 0 - might be input only.
+
 1 - When fuart is mux'd in it's also possible to mux'in uart1 and get a working rx only
     second uart here.
 
