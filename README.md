@@ -36,7 +36,7 @@ Clocking up to 1.1GHz works fine running dhrystone for hours but causes random l
 
  The chip has a bunch of stuff in it that isn't supported yet:
  - Faraday FUSBH200 USB *ehci* host controller
- - MUSB USB device controller
+ - [MUSB USB device controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/usb/musb/mstar.c)
  - USB PHY
  - USB host/device mux
  - Camera interface, h264 encoder, mjpeg etc.
