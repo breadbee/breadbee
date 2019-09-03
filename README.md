@@ -35,7 +35,10 @@ Clocking up to 1.1GHz works fine running dhrystone for hours but causes random l
 [1] One UART is used by the serial console, two more are available via muxing. 
 
  The chip has a bunch of stuff in it that isn't supported yet:
- - USB
+ - Faraday FUSBH200 USB *ehci* host controller
+ - [MUSB USB device controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/usb/musb/mstar.c)
+ - USB PHY
+ - USB host/device mux
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
  - [Crypto engine](https://github.com/fifteenhex/linux/blob/msc313e/drivers/crypto/msc313-aesdma.c) that seems to be able to do AES encrypted DMA transfers, memory mapped AES encryption etc
@@ -71,6 +74,8 @@ The breadbee is meant to be a "minimum viable product" to get the ball rolling. 
 - If you just want to buy one the intention is to put the board up on a crowd sourcing site at some point. When that happens that information will be here.
 
 - If you want chips to integrate into your own projects and don't have contacts in Shenzhen to get them get in touch and we'll figure something out. If you want 2080 of them getting them isn't a problem. If you want one or two I have a small supply. If the crowd sourcing happens and there is enough money left to buy extra chips to distribute in more accessible ways I will.
+
+- The gerbers have been uploaded to [OSH park](https://oshpark.com/shared_projects/slorKWK0) ready to order.
 
 ## Software
 
