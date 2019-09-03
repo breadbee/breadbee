@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:slice_alltheios-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -19,7 +20,7 @@ U 1 1 5D25EE14
 P 4650 3850
 F 0 "J1" H 4568 5067 50  0000 C CNN
 F 1 "Conn_01x21" H 4568 4976 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x21_P1.00mm_Vertical" H 4650 3850 50  0001 C CNN
+F 2 "edgeconnector:breadbee_1mm_header_connector" H 4650 3850 50  0001 C CNN
 F 3 "~" H 4650 3850 50  0001 C CNN
 	1    4650 3850
 	-1   0    0    -1  

@@ -1,4 +1,4 @@
-15758431837829812
+15759994665012188
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -43882,6 +43882,13 @@ single digit 7 segemnt red/green LED
 0
 10
 10
+edgeconnector
+breadbee_1mm_header_connector
+
+
+0
+42
+21
 Fiducial
 Fiducial_0.5mm_Mask1.5mm
 Circular Fiducial, 0.5mm bare copper, 1.5mm soldermask opening
