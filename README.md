@@ -127,6 +127,8 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ### J4 - Misc/High speed interfaces
 
+* Note the USB and SD/SDIO are not guaranteed to work as literally no care was taken to route those signals properly on rev0. 
+
 | name      | #  | alt functions | 5v tolerant | interrupt | notes |
 |-----------|----|---------------|-------------|-----------|-------|
 | +3v3      | 1  |               |             |           |       |
