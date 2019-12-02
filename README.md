@@ -29,16 +29,16 @@ These are features that are working:
 - [8 x PWM](https://github.com/fifteenhex/linux/blob/msc313e/drivers/pwm/pwm-msc313e.c)
 - [SD/SDIO interface](https://github.com/fifteenhex/linux/blob/msc313e/drivers/mmc/host/mstar-fcie.c)
 - 2 x ["byte" dma controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/dma/mstar/mstar-msc313-bdma.c)
+- USB PHY
+- USB host/device mux
+- Faraday FUSBH200 USB *ehci* host controller
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
 [1] One UART is used by the serial console, two more are available via muxing. 
 
  The chip has a bunch of stuff in it that isn't supported yet:
- - Faraday FUSBH200 USB *ehci* host controller
  - [MUSB USB device controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/usb/musb/mstar.c)
- - USB PHY
- - USB host/device mux
  - Camera interface, h264 encoder, mjpeg etc.
  - Audio ADC/DAC
  - [Crypto engine](https://github.com/fifteenhex/linux/blob/msc313e/drivers/crypto/msc313-aesdma.c) that seems to be able to do AES encrypted DMA transfers, memory mapped AES encryption etc
