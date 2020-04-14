@@ -97,7 +97,7 @@ https://github.com/fifteenhex/linux/tree/msc313e
 ### Buildroot
 
 Combines the u-boot and kernel above with a root filesystem and generates flashable images.
-There are some small peices of a board configuration application called "beecfg" to setup pinmuxing etc.
+There are some small pieces of a board configuration application called "beecfg" to setup pinmuxing etc.
 
 https://github.com/fifteenhex/breadbee_buildroot
 
@@ -183,3 +183,7 @@ Unfortunately the DRAM setup process isn't understood yet. So the actual boot pr
 - Load the IPL
 - Trick the IPL into loading the u-boot SPL as IPL_CUST into DRAM (IPL_CUST is limited to 64K so we still need the SPL)
 - SPL loads the main u-boot and starts it.
+
+## More info
+
+[linux-chenxing](https://linux-chenxing.org) has more info about mstar/sigmastar socs.
