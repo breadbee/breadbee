@@ -71,9 +71,9 @@ The breadbee is meant to be a "minimum viable product" to get the ball rolling. 
 
 - If you ask very nicely and you are willing to do something like write a nice python library or flesh out drivers for the board it's possible you can have one of the prototype boards for FREE! Get in touch!
 
-- If you just want to buy one the intention is to put the board up on a crowd sourcing site at some point. When that happens that information will be here.
+- ~~If you just want to buy one the intention is to put the board up on a crowd sourcing site at some point. When that happens that information will be here.~~ [crowdsupply](https://www.crowdsupply.com/daniel-palmer/breadbee) will eventually be selling premade boards. This might take a while though.
 
-- If you want chips to integrate into your own projects and don't have contacts in Shenzhen to get them get in touch and we'll figure something out. If you want 2080 of them getting them isn't a problem. If you want one or two I have a small supply. If the crowd sourcing happens and there is enough money left to buy extra chips to distribute in more accessible ways I will.
+- If you want chips to integrate into your own projects and don't have contacts in Shenzhen to get them get in touch and we'll figure something out. If you want 2080 of them getting them isn't a problem. If you want one or two I have a small supply. If the crowd sourcing happens and there is enough money left to buy extra chips to distribute in more accessible ways I will. Since April 2020 chips have now also started to turn on up ebay.
 
 - The gerbers have been uploaded to [OSH park](https://oshpark.com/shared_projects/slorKWK0) ready to order.
 
