@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name ea3036c)(type Legacy)(uri ${KIPRJMOD}/symbols/ea3036c.lib)(options "")(descr ""))
+  (lib (name ch340e)(type Legacy)(uri ${KIPRJMOD}/symbols/ch340e.lib)(options "")(descr ""))
+  (lib (name hanrun)(type Legacy)(uri ${KIPRJMOD}/symbols/hanrun.lib)(options "")(descr ""))
+  (lib (name msc313e)(type Legacy)(uri ${KIPRJMOD}/symbols/msc313e.lib)(options "")(descr ""))
+  (lib (name spinor)(type Legacy)(uri ${KIPRJMOD}/symbols/spinor.lib)(options "")(descr ""))
+  (lib (name tvsarray)(type Legacy)(uri ${KIPRJMOD}/symbols/tvsarray.lib)(options "")(descr ""))
+)

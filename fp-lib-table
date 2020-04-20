@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name hanrun)(type KiCad)(uri ${KIPRJMOD}/footprints/hanrun.pretty)(options "")(descr ""))
+  (lib (name USB-MICRO-MK5P-2)(type KiCad)(uri ${KIPRJMOD}/footprints/USB-MICRO-MK5P-2.pretty)(options "")(descr ""))
+  (lib (name wson8-8x6mm)(type KiCad)(uri ${KIPRJMOD}/footprints/wson8-8x6mm.pretty)(options "")(descr ""))
+  (lib (name s2qfn80)(type KiCad)(uri ${KIPRJMOD}/footprints/s2qfn80.pretty)(options "")(descr ""))
+)
