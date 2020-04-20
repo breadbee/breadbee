@@ -186,4 +186,4 @@ Unfortunately the DRAM setup process isn't understood yet. So the actual boot pr
 
 ## More info
 
-[linux-chenxing](https://linux-chenxing.org) has more info about mstar/sigmastar socs.
+[linux-chenxing](http://linux-chenxing.org) has more info about mstar/sigmastar socs.
