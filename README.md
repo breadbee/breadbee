@@ -32,6 +32,7 @@ These are features that are working:
 - USB PHY
 - USB host/device mux
 - Faraday FUSBH200 USB *ehci* host controller
+- On die temperature sensor. (sorta)
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
@@ -46,7 +47,6 @@ Clocking up to 1.1GHz works fine running dhrystone for hours but causes random l
  - Some sort of IR decoder that can wake the chip up based on the IR codes it sees.
  - 6 byte unique device ID and efuse for key storage
  - [command queue dma controller](https://github.com/fifteenhex/linux/blob/msc313e/drivers/dma/mstar/mstar-msc313-cmdq.c)
- - On die temperature sensor.
 
 It's full of flashy magic!
 
