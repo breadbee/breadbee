@@ -101,6 +101,10 @@ There are some small pieces of a board configuration application called "beecfg"
 
 https://github.com/fifteenhex/breadbee_buildroot
 
+## BoM
+
+[Google Sheet](https://docs.google.com/spreadsheets/d/1FwoQdfAULd6vKPnkrVnFDfQQs8OdsqdwefH3aLVehPo)
+
 ## Pin Table
 
 ### J2 - Main 2.54mm header

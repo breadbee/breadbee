@@ -4,10 +4,10 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "BreadBee"
+Date "2020-04-23"
+Rev "1"
+Comp "~dgp"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -599,7 +599,7 @@ L Device:C C5
 U 1 1 5CAAEF64
 P 14400 5150
 F 0 "C5" H 14515 5196 50  0000 L CNN
-F 1 "C" H 14515 5105 50  0000 L CNN
+F 1 "1uF" H 14515 5105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 14438 5000 50  0001 C CNN
 F 3 "~" H 14400 5150 50  0001 C CNN
 	1    14400 5150
@@ -864,7 +864,7 @@ L Device:R R9
 U 1 1 5C9DBDF7
 P 15300 3300
 F 0 "R9" H 15370 3346 50  0000 L CNN
-F 1 "R" H 15370 3255 50  0000 L CNN
+F 1 "390" H 15370 3255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 15230 3300 50  0001 C CNN
 F 3 "~" H 15300 3300 50  0001 C CNN
 	1    15300 3300
@@ -875,7 +875,7 @@ L Device:R R10
 U 1 1 5C9DBEBA
 P 15600 3300
 F 0 "R10" H 15670 3346 50  0000 L CNN
-F 1 "R" H 15670 3255 50  0000 L CNN
+F 1 "390" H 15670 3255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 15530 3300 50  0001 C CNN
 F 3 "~" H 15600 3300 50  0001 C CNN
 	1    15600 3300
@@ -1287,7 +1287,7 @@ L Device:R R11
 U 1 1 5CD05675
 P 7800 5100
 F 0 "R11" V 7593 5100 50  0000 C CNN
-F 1 "R" V 7684 5100 50  0000 C CNN
+F 1 "0" V 7684 5100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7730 5100 50  0001 C CNN
 F 3 "~" H 7800 5100 50  0001 C CNN
 	1    7800 5100
@@ -1924,7 +1924,7 @@ L Device:R R17
 U 1 1 5CC9D39C
 P 4000 10500
 F 0 "R17" H 4070 10546 50  0000 L CNN
-F 1 "R" H 4070 10455 50  0000 L CNN
+F 1 "0" H 4070 10455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3930 10500 50  0001 C CNN
 F 3 "~" H 4000 10500 50  0001 C CNN
 	1    4000 10500
@@ -1988,7 +1988,7 @@ L Device:R R12
 U 1 1 5CD478ED
 P 7150 5700
 F 0 "R12" V 6943 5700 50  0000 C CNN
-F 1 "R" V 7034 5700 50  0000 C CNN
+F 1 "0" V 7034 5700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7080 5700 50  0001 C CNN
 F 3 "~" H 7150 5700 50  0001 C CNN
 	1    7150 5700
@@ -2725,4 +2725,6 @@ Text Notes 11150 11000 0    50   ~ 0
 DECOUPLING
 Text Notes 6350 6650 0    50   ~ 0
 These are jumpers to allow the usb and eth power supplies to\nbe disconnected if you don't need them. This seems to actually\nstop the board from booting though so they might be removed\nin the next revision.
+Text Notes 9700 9550 0    50   ~ 0
+The enables are configured to sequence the power rails in accordance with the datasheet.
 $EndSCHEMATC
