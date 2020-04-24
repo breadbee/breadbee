@@ -109,22 +109,22 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 ### J2 - Main 2.54mm header
 
-| interrupt | 5v tolerant |   notes   | alt functions           |    name   |  # |  # |   name    | alt functions |   notes   | 5v tolerant | interrupt |
-|-----------|-------------|-----------|-------------------------|-----------|----|----|-----------|---------------|-----------|-------------|-----------|
-|           |             |           |                         |    +5v    |  1 | 2  |   +3v3    |               |           |             |           |
-|           |             |           |                         |    gnd    |  3 | 4  | pm_gpio4  |               | [0]       |    yes      |   yes     |
-|           |             |           |                         | i2c1_scl  |  5 | 6  | i2c1_sda  |               |           |             |           |
-|   yes     |             |           | ej_tck, pwm4            | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5  |           |             |   yes     |
-|   yes     |             |           | ej_tdo, pwm6            | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7  |           |             |   yes     |
-|           |     yes     |           |                         | sar_gpio2 | 11 | 12 | sar_gpio3 |               |           |    yes      |           |
-|           |     yes     |           |                         | sar_gpio1 | 13 | 14 | sar_gpio0 |               |           |    yes      |           |
-|           |     yes     |   cs      | spi0_cz, pwm0           | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1 |   clk     |    yes      |           |
-|           |     yes     | mosi, [1] | spi0_di, pwm2, uart1_rx | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3, uart1_tx |   miso    |    yes      |           |
-|           |             |           |                         | sr_io7    | 19 | 20 | sr_io6    |               |           |             |           |
-|           |             |           |                         | sr_io5    | 21 | 22 | sr_io4    |               |           |             |           |
-|           |             |           |                         | sr_io3    | 23 | 24 | sr_io2    |               |           |             |           |
+| interrupt | 5v tolerant |   notes   | alt functions           |    name   |  # |  # |   name    | alt functions           |   notes                 | 5v tolerant | interrupt |
+|-----------|-------------|-----------|-------------------------|-----------|----|----|-----------|-------------------------|-------------------------|-------------|-----------|
+|           |             |           |                         |    +5v    |  1 | 2  |   +3v3    |                         |                         |             |           |
+|           |             |           |                         |    gnd    |  3 | 4  | pm_gpio4  |                         | ![special][pmgpio4note] |    yes      |   yes     |
+|           |             |           |                         | i2c1_scl  |  5 | 6  | i2c1_sda  |                         |                         |             |           |
+|   yes     |             |           | ej_tck, pwm4            | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5            |                         |             |   yes     |
+|   yes     |             |           | ej_tdo, pwm6            | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7            |                         |             |   yes     |
+|           |     yes     |           |                         | sar_gpio2 | 11 | 12 | sar_gpio3 |                         |                         |    yes      |           |
+|           |     yes     |           |                         | sar_gpio1 | 13 | 14 | sar_gpio0 |                         |                         |    yes      |           |
+|           |     yes     |   cs      | spi0_cz, pwm0           | fuart_rx  | 15 | 16 | fuart_tx  | spi0_ck, pwm1           |   clk                   |    yes      |           |
+|           |     yes     | mosi, [1] | spi0_di, pwm2, uart1_rx | fuart_cts | 17 | 18 | fuart_rts | spi0_do, pwm3, uart1_tx |   miso                  |    yes      |           |
+|           |             |           |                         | sr_io7    | 19 | 20 | sr_io6    |                         |                         |             |           |
+|           |             |           |                         | sr_io5    | 21 | 22 | sr_io4    |                         |                         |             |           |
+|           |             |           |                         | sr_io3    | 23 | 24 | sr_io2    |                         |                         |             |           |
 
-0 - might be input only.
+[pmgpio4note] - This is a special pin that has to be explictly unlocked to be set. It seems to be intended for powering down the main CPU. It might move on rev1.
 
 1 - When fuart is mux'd in it's also possible to mux'in uart1 and get a working rx only
     second uart here.
