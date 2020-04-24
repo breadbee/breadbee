@@ -112,7 +112,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 | interrupt | 5v tolerant |   notes   | alt functions           |    name   |  # |  # |   name    | alt functions           |   notes                 | 5v tolerant | interrupt |
 |-----------|-------------|-----------|-------------------------|-----------|----|----|-----------|-------------------------|-------------------------|-------------|-----------|
 |           |             |           |                         |    +5v    |  1 | 2  |   +3v3    |                         |                         |             |           |
-|           |             |           |                         |    gnd    |  3 | 4  | pm_gpio4  |                         | [special][0]            |    yes      |   yes     |
+|           |             |           |                         |    gnd    |  3 | 4  | pm_gpio4  |                         | [0]                     |    yes      |   yes     |
 |           |             |           |                         | i2c1_scl  |  5 | 6  | i2c1_sda  |                         |                         |             |           |
 |   yes     |             |           | ej_tck, pwm4            | spi0_cz   |  7 | 8  | spi0_ck   | ej_tms, pwm5            |                         |             |   yes     |
 |   yes     |             |           | ej_tdo, pwm6            | spi0_di   |  9 | 10 | spi0_do   | ej_tdi, pwm7            |                         |             |   yes     |
@@ -124,7 +124,7 @@ https://github.com/fifteenhex/breadbee_buildroot
 |           |             |           |                         | sr_io5    | 21 | 22 | sr_io4    |                         |                         |             |           |
 |           |             |           |                         | sr_io3    | 23 | 24 | sr_io2    |                         |                         |             |           |
 
-[0] - This is a special pin that has to be explictly unlocked to be set. It seems to be intended for powering down the main CPU. It might move on rev1.
+0: This is a special pin that has to be explictly unlocked to be set. It seems to be intended for powering down the main CPU. It might move on rev1.
 
 1 - When fuart is mux'd in it's also possible to mux'in uart1 and get a working rx only
     second uart here.
