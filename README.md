@@ -52,6 +52,11 @@ It's full of flashy magic!
 
 ![PWM blinky](blinky.gif)
 
+## Board Revisions
+
+- Rev0 - Original version, works.
+- Rev1 - Same as rev0 basically but the QFN80 footprint is slightly fixed to not have very thin pads on one side.
+
 ## Motivations
 
 - Networked microcontrollers are a disaster waiting to happen; Many solutions - even commercial ones - use LWIP as the TCP/IP stack with no intention of actually maintaining it, use relatively unknown TLS libraries because of lack of memory, have no memory protection, no isolation between the moving parts.
@@ -75,7 +80,7 @@ The breadbee is meant to be a "minimum viable product" to get the ball rolling. 
 
 - If you want chips to integrate into your own projects and don't have contacts in Shenzhen to get them get in touch and we'll figure something out. If you want 2080 of them getting them isn't a problem. If you want one or two I have a small supply. If the crowd sourcing happens and there is enough money left to buy extra chips to distribute in more accessible ways I will. Since April 2020 chips have now also started to turn on up ebay.
 
-- The gerbers have been uploaded to [OSH park](https://oshpark.com/shared_projects/slorKWK0) ready to order.
+- The gerbers have been uploaded to [OSH park (rev1)](https://oshpark.com/shared_projects/lQ6wt3Dk) ready to order. [OSH park (rev0)](https://oshpark.com/shared_projects/slorKWK0)
 
 ## Software
 
@@ -166,28 +171,6 @@ https://github.com/fifteenhex/breadbee_buildroot
 
 JTAG is enabled at boot up on the spi0 pins by the u-boot SPL.
 
-## Boot process
-
-The standard MStar boot process is like this:
-- Start the boot rom that is baked into the chip
-- Load the "IPL" from SPI NOR into internal SRAM
-- Jump into the IPL
-- The IPL then does DRAM setup and tries to load "IPL_CUST" from SPI NOR or somewhere else if that fails
-- IPL_CUST does a bunch of higher level stuff and then loads an XZ compressed u-boot image into DRAM and starts it
-
-The ideal boot process would be:
-
-- Start the boot rom that is baked into the chip
-- Load the u-boot SPL
-- u-boot SPL does DRAM setup and loads the main u-boot from SPI NOR into DRAM and starts it.
-
-Unfortunately the DRAM setup process isn't understood yet. So the actual boot process is:
-
-- Start the boot rom that is baked into the chip
-- Load the IPL
-- Trick the IPL into loading the u-boot SPL as IPL_CUST into DRAM (IPL_CUST is limited to 64K so we still need the SPL)
-- SPL loads the main u-boot and starts it.
-
-## More info
+## More technical info
 
 [linux-chenxing](http://linux-chenxing.org) has more info about mstar/sigmastar socs.
