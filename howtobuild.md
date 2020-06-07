@@ -9,7 +9,7 @@ These are some rough instructions base on how I've been hand assembling boards. 
 - Tweezers, poking implements.
 - Side cutters.
 - Kapton tape.
-- Shape small craft knife blade with tape wrapped around it so that it looks like some sort of prison weapon.
+- Sharp small craft knife blade with tape wrapped around it so that it looks like some sort of prison weapon.
 - Solder paste. Low temp stuff is the easiest to work with but can result in brittle joints for the usb connector. If you use low temp solder you probably want some epoxy to reinforce the usb connector.
 - Solder wick.
 - A soldering iron with a knife or if you can't get a knife tip a small point. A small point isn't ideal but you won't have space to get a massive chisel tip into the places you need.
@@ -30,7 +30,7 @@ Building in with the steps below should result in usable boards. Maybe not produ
 
 If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kaptop tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
 
-You must tape it down as the board is very small and you will not be able to overcome the surface tension of the components to reposition them if you don't. Instead you'll be despararently trying to poke a component into place and the little board will be moving around instead. Also if you're like me and knudge stuff by mistake you'll be happy the board was taped down and not on the floor with all of the components smeared across it.
+You must tape it down as the board is very small and you will not be able to overcome the surface tension of the components to reposition them if you don't. Instead you'll be desperately trying to poke a component into place and the little board will be moving around instead. Also if you're like me and knudge stuff by mistake you'll be happy the board was taped down and not on the floor with all of the components smeared across it.
 
 ## 1 - Mount the MSC313E
 
