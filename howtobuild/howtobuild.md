@@ -1,3 +1,5 @@
+** this isn't finished yet **
+
 # How to build a breadbee
 
 These are some rough instructions base on how I've been hand assembling boards. If you have a reflow oven or a pick and place machine you can probably do better on your own..
