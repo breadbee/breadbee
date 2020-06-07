@@ -14,8 +14,8 @@ You might have never heard of MStar but you probably have one of their chips in 
 These are features that are working:
 
 - ~1GHz Cortex A7 CPU with NEON etc[0].
-- 64MB DDR2
-- 64KB (maybe more) SRAM 
+- 64MB DDR2 (Probably DDR2-1333)
+- 128KB SRAM (88KB if you use a MSC313(no e).
 - [Bootable, memory mapped SPI-NOR](https://github.com/fifteenhex/linux/blob/msc313e/drivers/spi/spi-msc313-isp.c)
 - 100Mbit ethernet.
 - [4 x 10bit ADC channels](https://github.com/fifteenhex/linux/blob/msc313e/drivers/iio/adc/msc313e_sar.c)
