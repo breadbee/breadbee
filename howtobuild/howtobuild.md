@@ -46,6 +46,8 @@ Once you have your breath back get you solder wick and cut the end into triangle
 
 Now that the excess solder is gone you can take another little break and wait for everything to cool down again. Once it looks like everything solid again take some of your flux remover and cover the area around the MSC313E. Take your old tooth brush and scrub away the flux. If you have good eyes you should be able to see if there are any bridges, blobly bits, dry pads etc. Once you've done the solder wick trick a few times you should always end up with something that's pretty much perfect. Anyhow if you do have bridges or blobs you just need to apply some flux and then drag your soldering iron along the edge to neaten everything up. You want to do this before mounting any more components as you won't have the space later.
 
+![msc313e solder joints](msc313_side_view.png)
+
 # Mount the EA3036C
 
 Use exactly the same process as the MSC313E.
