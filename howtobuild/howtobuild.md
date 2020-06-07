@@ -88,6 +88,10 @@ Start from C11 and go counter clockwise up to C37, dab paste and place the caps 
 
 # Mount the Ethernet jack
 
+![ethernet jack pins](ethernet_jack_pins.png)
+
+![ethernet jack lug](ethernet_jack_lug.png)
+
 # mount the spi nor
 
 # flash the spi nor
