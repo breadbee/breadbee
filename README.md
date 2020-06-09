@@ -55,7 +55,7 @@ It's full of flashy magic!
 ## Board Revisions
 
 - Rev0 - Original version, works.
-- Rev1 - Same as rev0 basically but the QFN80 footprint is slightly fixed to not have very thin pads on one side.
+- Rev1 - Same as rev0 basically but the QFN80 footprint is slightly fixed to not have very thin pads on one side. Rev1 has one weird pad on the QFN80 footprint and an overlapping extra trace on one of the USB signals.
 
 ## Motivations
 
