@@ -9,7 +9,7 @@
   (fp_line (start -4.6 -2.5) (end 4.6 -2.5) (layer F.CrtYd) (width 0.15))
   (fp_line (start 4.6 -2.5) (end 4.6 2.5) (layer F.CrtYd) (width 0.15))
   (fp_line (start 4.6 2.5) (end -4.6 2.5) (layer F.CrtYd) (width 0.15))
-  (fp_line (start -4.6 2.5) (end -4.6 -2.5) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -4.6 2.5) (end -4.6 -2.5) (layer F.CrtYd) (width 0.15))
   (pad 1 smd rect (at -3.875 -1.905) (size 1.05 0.57) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at -3.875 -0.635) (size 1.05 0.57) (layers F.Cu F.Paste F.Mask))
   (pad 3 smd rect (at -3.875 0.635) (size 1.05 0.57) (layers F.Cu F.Paste F.Mask))
