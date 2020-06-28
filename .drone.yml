@@ -16,11 +16,11 @@ steps:
   - docker build -t kicad .
   - chmod -R o+rw ./
 
-- name: pcbdraw
+- name: render
   image: kicad
   pull: if-not-exists
   commands:
-  - pcbdraw breadbee.kicad_pcb breadbee.png
+  - make
 
 volumes:
   - name: docker_sock
