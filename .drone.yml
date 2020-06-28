@@ -1,0 +1,33 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+
+- name: createimage
+  image: docker:latest
+  volumes:
+  - name: docker_sock
+    path: /var/run/docker.sock
+  commands:
+  - ls -l ./
+  - ls -l /var/run/
+  - docker build -t kicad .
+  - chmod -R o+rw ./
+
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_key
+  when:
+    event:
+    - tag
+
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
+
+...
