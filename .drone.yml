@@ -22,6 +22,16 @@ steps:
   commands:
   - make
 
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_key
+    files: outputs/breadbee.png
+  when:
+    event:
+    - tag
+
 volumes:
   - name: docker_sock
     host:
