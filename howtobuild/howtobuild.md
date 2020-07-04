@@ -153,3 +153,12 @@ If this isn't present check around the SoC to see if there are any obvious bad j
 
 # Boot/NOR debugging
 
+If you don't see any output from u-boot it's possible your board is running but the processor can't boot
+from the NOR for some reason.
+
+If the processor is working there is always some output on serial. Unfortunately it's at 38400 baud
+and comes usually before the usb->serial is registered. To get around this plug the board into USB and let it
+register, setup minicom to 38400 baud etc. Then poke a wire into pin 2 of J2 (3.3v) and touch it to either C37
+or R23 on the end that is connected to the reset signal. If the processor is running you should get "E:CD".
+Nothing after "E:CD" means the contents of your NOR flash is bad or the NOR flash is not connected properly.
+
