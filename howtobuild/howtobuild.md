@@ -30,7 +30,7 @@ Building in with the steps below should result in usable boards. Maybe not produ
 
 ## 0 - Tape the board down
 
-If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kaptop tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
+If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kapton tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
 
 You must tape it down as the board is very small and you will not be able to overcome the surface tension of the components to reposition them if you don't. Instead you'll be desperately trying to poke a component into place and the little board will be moving around instead. Also if you're like me and knudge stuff by mistake you'll be happy the board was taped down and not on the floor with all of the components smeared across it.
 
@@ -96,6 +96,39 @@ Start from C11 and go counter clockwise up to C37, dab paste and place the caps 
 
 # mount the spi nor
 
+You can mount the SPI NOR with out anything on it as long as you have a programming clip. You need to write it first.
+
 # flash the spi nor
 
-# Profit
+
+# Profit?
+
+## Smoke test
+
+If possible plug the board into a bench power supply with the current limit set at ~200mA.
+If the board is generally working you should see current draw of ~10mA for a short time and then between 80mA and 100mA.
+
+If the current draw stays at around ~10mA the processor is probably running but the initial boot stage isn't getting loaded
+from NOR flash. If the current draw is ~0mA then you probably have a power supply issue.
+
+If you don't have a bench power supply one of those cheap USB power meters works as well but without the protection
+of being able to limit the current if you have something really wrong. You should probably try with a USB charger and
+not the USB port of your expensive computer initially.
+
+Generally speaking nothing should be getting hot once you plug it in. If board is getting hot when you power it up kill the
+power and check for shorts etc.
+
+## Fingers crossed..
+
+If the magic smoke didn't come out you should be good to plug it into your computer now.
+
+A few moments after plugging it in you should see the usb->serial chip get registered. If you see no USB activity or your OS
+is complaining that it couldn't enumerate the device you might need to check the USB connector soldering.
+
+The current u-boot will turn on the D2 led (top left corner) when it starts so you can see the processor has gotten that far
+so you might be able to see that your board is running even if the usb->serial part isn't coming up.
+
+# Power supply debugging
+
+# Boot/NOR debugging
+
