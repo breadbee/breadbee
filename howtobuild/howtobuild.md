@@ -130,5 +130,26 @@ so you might be able to see that your board is running even if the usb->serial p
 
 # Power supply debugging
 
+## Check the input power is getting from the USB connector to the board:
+
+- Check there is 5v on pin 1 of J2
+
+If this is missing check your USB connector soldering.
+
+## Check the outputs from the EA3036C are right:
+
+- Check there is ~1v on C28
+- Check there is ~3.3v on pin 1 of J4
+- Check there is ~1.8v on C23
+
+If any of these rails are missing or the wrong voltages you'll need to check over the power supply area.
+Missing voltages might be soldering issues. Wrong voltages might be component value mistakes.
+
+## Check that internal LDO of the SoC is alive
+
+- Check there is ~0.9v on C38
+
+If this isn't present check around the SoC to see if there are any obvious bad joints.
+
 # Boot/NOR debugging
 
