@@ -164,3 +164,7 @@ register, setup minicom to 38400 baud etc. Then poke a wire into pin 2 of J2 (3.
 or R23 on the end that is connected to the reset signal. If the processor is running you should get "E:CD".
 Nothing after "E:CD" means the contents of your NOR flash is bad or the NOR flash is not connected properly.
 
+# Clock debugging
+
+If you have a scope poke probe at R8 to see if you have the 24MHz clock. 
+If you don't have a scope you can check with a multimeter by probing at R8 to see if you have ~1.8v there.
