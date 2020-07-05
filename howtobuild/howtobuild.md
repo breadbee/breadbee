@@ -28,6 +28,8 @@ Generally building a board in stages isn't good. Constantly reheating the board 
 
 Building in with the steps below should result in usable boards. Maybe not production quality super high quality ones but ones that will work for your projects.
 
+A component layout was done by hand and superimposed on top of the finished board photo or the copper tracks. The different versions are available in the "components-*" files present in the current directory. If you're used to assemble boards with components reference on paper, the ![printable version](components-only.pdf) might be useful. The source of these files is provided in components-layout.svg and is editable under Inkscape.
+
 ## 0 - Tape the board down
 
 If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kapton tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
