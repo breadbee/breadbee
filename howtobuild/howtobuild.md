@@ -14,7 +14,7 @@ These are some rough instructions base on how I've been hand assembling boards. 
 - Sharp small craft knife blade with tape wrapped around it so that it looks like some sort of prison weapon.
 - Solder paste. Low temp stuff is the easiest to work with but can result in brittle joints for the usb connector. If you use low temp solder you probably want some epoxy to reinforce the usb connector.
 - Solder wick.
-- A soldering iron with a knife or if you can't get a knife tip a small point. A small point isn't ideal but you won't have space to get a massive chisel tip into the places you need.
+- A soldering iron with a knife tip or if you can't get a knife tip a small point. A small point isn't ideal but you won't have space to get a massive chisel tip into the places you need.
 - Flux in with bottle a little brush applicator or gel style SMD rework flux. Flux pens aren't ideal.
 - Proper flux cleaner or at least IPA.
 - Old tooth brush.
