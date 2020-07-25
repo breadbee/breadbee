@@ -95,9 +95,8 @@ https://github.com/fifteenhex/u-boot/tree/msc313
 
 ### Kernel
 
-All of the above features work to some degree.
-
-https://github.com/fifteenhex/linux/tree/msc313e
+All of the above features work to some degree in the work tree. Mainlining is in progress but will take time.
+For more info please see the linux-chenxing.org [page about mainlining](http://linux-chenxing.org/mainlining.html).
 
 ### Buildroot
 
