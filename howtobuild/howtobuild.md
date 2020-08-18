@@ -14,7 +14,7 @@ These are some rough instructions base on how I've been hand assembling boards. 
 - Sharp small craft knife blade with tape wrapped around it so that it looks like some sort of prison weapon.
 - Solder paste. Low temp stuff is the easiest to work with but can result in brittle joints for the usb connector. If you use low temp solder you probably want some epoxy to reinforce the usb connector.
 - Solder wick.
-- A soldering iron with a knife or if you can't get a knife tip a small point. A small point isn't ideal but you won't have space to get a massive chisel tip into the places you need.
+- A soldering iron with a knife tip or if you can't get a knife tip a small point. A small point isn't ideal but you won't have space to get a massive chisel tip into the places you need.
 - Flux in with bottle a little brush applicator or gel style SMD rework flux. Flux pens aren't ideal.
 - Proper flux cleaner or at least IPA.
 - Old tooth brush.
@@ -28,9 +28,11 @@ Generally building a board in stages isn't good. Constantly reheating the board 
 
 Building in with the steps below should result in usable boards. Maybe not production quality super high quality ones but ones that will work for your projects.
 
+A component layout was done by hand and superimposed on top of the finished board photo or the copper tracks. The different versions are available in the "components-*" files present in the current directory. If you're used to assemble boards with components reference on paper, the ![printable version](components-only.pdf) might be useful. The source of these files is provided in components-layout.svg and is editable under Inkscape.
+
 ## 0 - Tape the board down
 
-If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kaptop tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
+If you have a nice PCB vice then use that. Otherwise tape the board down to your work surface with kapton tape. If you think you will need to rotate the board while soldering find something with some weight you can tape it to that won't melt or suck all of the heat out of the board while soldering. I use a square of MDF covered in kapton tape.
 
 You must tape it down as the board is very small and you will not be able to overcome the surface tension of the components to reposition them if you don't. Instead you'll be desperately trying to poke a component into place and the little board will be moving around instead. Also if you're like me and knudge stuff by mistake you'll be happy the board was taped down and not on the floor with all of the components smeared across it.
 
@@ -96,6 +98,73 @@ Start from C11 and go counter clockwise up to C37, dab paste and place the caps 
 
 # mount the spi nor
 
+You can mount the SPI NOR with out anything on it as long as you have a programming clip. You need to write it first.
+
 # flash the spi nor
 
-# Profit
+
+# Profit?
+
+## Smoke test
+
+If possible plug the board into a bench power supply with the current limit set at ~200mA.
+If the board is generally working you should see current draw of ~10mA for a short time and then between 80mA and 100mA.
+
+If the current draw stays at around ~10mA the processor is probably running but the initial boot stage isn't getting loaded
+from NOR flash. If the current draw is ~0mA then you probably have a power supply issue.
+
+If you don't have a bench power supply one of those cheap USB power meters works as well but without the protection
+of being able to limit the current if you have something really wrong. You should probably try with a USB charger and
+not the USB port of your expensive computer initially.
+
+Generally speaking nothing should be getting hot once you plug it in. If board is getting hot when you power it up kill the
+power and check for shorts etc.
+
+## Fingers crossed..
+
+If the magic smoke didn't come out you should be good to plug it into your computer now.
+
+A few moments after plugging it in you should see the usb->serial chip get registered. If you see no USB activity or your OS
+is complaining that it couldn't enumerate the device you might need to check the USB connector soldering.
+
+The current u-boot will turn on the D2 led (top left corner) when it starts so you can see the processor has gotten that far
+so you might be able to see that your board is running even if the usb->serial part isn't coming up.
+
+# Power supply debugging
+
+## Check the input power is getting from the USB connector to the board:
+
+- Check there is 5v on pin 1 of J2
+
+If this is missing check your USB connector soldering.
+
+## Check the outputs from the EA3036C are right:
+
+- Check there is ~1v on C28
+- Check there is ~3.3v on pin 1 of J4
+- Check there is ~1.8v on C23
+
+If any of these rails are missing or the wrong voltages you'll need to check over the power supply area.
+Missing voltages might be soldering issues. Wrong voltages might be component value mistakes.
+
+## Check that internal LDO of the SoC is alive
+
+- Check there is ~0.9v on C38
+
+If this isn't present check around the SoC to see if there are any obvious bad joints.
+
+# Boot/NOR debugging
+
+If you don't see any output from u-boot it's possible your board is running but the processor can't boot
+from the NOR for some reason.
+
+If the processor is working there is always some output on serial. Unfortunately it's at 38400 baud
+and comes usually before the usb->serial is registered. To get around this plug the board into USB and let it
+register, setup minicom to 38400 baud etc. Then poke a wire into pin 2 of J2 (3.3v) and touch it to either C37
+or R23 on the end that is connected to the reset signal. If the processor is running you should get "E:CD".
+Nothing after "E:CD" means the contents of your NOR flash is bad or the NOR flash is not connected properly.
+
+# Clock debugging
+
+If you have a scope poke probe at R8 to see if you have the 24MHz clock. 
+If you don't have a scope you can check with a multimeter by probing at R8 to see if you have ~1.8v there.

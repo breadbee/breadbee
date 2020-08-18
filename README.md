@@ -33,6 +33,7 @@ These are features that are working:
 - USB host/device mux
 - Faraday FUSBH200 USB *ehci* host controller
 - On die temperature sensor. (sorta)
+- Hardware RNG. (quality unknown)
 - 8051(probably) low power mode management MCU. (sorta) Idle current is ~130ma, sleeping ~30ma. Can probably be improved.
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
@@ -95,9 +96,8 @@ https://github.com/fifteenhex/u-boot/tree/msc313
 
 ### Kernel
 
-All of the above features work to some degree.
-
-https://github.com/fifteenhex/linux/tree/msc313e
+All of the above features work to some degree in the work tree. Mainlining is in progress but will take time.
+For more info please see the linux-chenxing.org [page about mainlining](http://linux-chenxing.org/mainlining.html).
 
 ### Buildroot
 
