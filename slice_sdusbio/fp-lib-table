@@ -1,5 +1,0 @@
-(fp_lib_table
-  (lib (name USB-MICRO-MK5P-2)(type KiCad)(uri ${KIPRJMOD}/../footprints/USB-MICRO-MK5P-2.pretty)(options "")(descr ""))
-  (lib (name edgeconnector)(type KiCad)(uri /media/junk/hardware/breadbee/footprints/edgeconnector.pretty)(options "")(descr ""))
-  (lib (name sdsocket)(type KiCad)(uri /media/junk/hardware/breadbee/footprints/sdsocket.pretty)(options "")(descr ""))
-)
