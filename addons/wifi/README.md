@@ -2,7 +2,7 @@
 
 This is far from being of high quality, but provided little effort, it is possible to add a simple WiFi module to the breadbee.
 
-There are a wide variety of cheap USB modules provided as a small 12.3x13mm PCB with 4 pins on one side and 2 on the other one. These modules work from 3.3V and are connecte via USB. Usually they do not have any antenna but one can be connected to the two pins on one side.
+There are a wide variety of cheap USB modules provided as a small 12.3x13mm PCB with 4 pins on one side and 2 on the other one. These modules work from 3.3V and are connected via USB. Usually they do not have any antenna but one can be connected to the two pins on one side.
 
 Such modules are widely used in WiFi cameras and various consumer appliances, and are usually available from $1.50 to $5.00 depending on the modules. Just search for RTL8188EUS, RTL8188ETV, RTL8188FTV, MT7601U to find a few such devices. Most of them use the exact same footprint and pinout.
 
