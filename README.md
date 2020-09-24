@@ -176,3 +176,7 @@ JTAG is enabled at boot up on the spi0 pins by the u-boot SPL.
 ## More technical info
 
 [linux-chenxing](http://linux-chenxing.org) has more info about mstar/sigmastar socs.
+
+## Articles etc
+
+[A nice blog entry from Willy about his experience building boards](https://wtarreau.blogspot.com/2020/09/breadbee-build-your-own-single-board.html)
