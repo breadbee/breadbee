@@ -34,6 +34,7 @@ These are features that are working:
 - Faraday FUSBH200 USB *ehci* host controller
 - On die temperature sensor. (sorta)
 - Hardware RNG. (quality unknown)
+- SHA engine. (Runs, not wired to the kernel)
 - 8051(probably) low power mode management MCU. (sorta) Idle current is ~130ma, sleeping ~30ma. Can probably be improved.
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
