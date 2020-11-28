@@ -4,7 +4,8 @@ A very small, 32mm x 30mm, ARM Cortex A7 development board that costs about ~$10
 to make in low quantities and can be assembled at home with a cheap hot air rework
 station. With a [small adapter socket](./hivee) it can be mounted vertically in a standard breadboard.
 
-The breadbee is based on a relatively unknown IP camera SoC, the MSC313E, from a company called MStar.
+The breadbee is based on a relatively unknown IP camera SoC, the MSC313E, from a company called MStar
+(now part of MediaTek as a subsidiary called SigmaStar).
 You might have never heard of MStar but you probably have one of their chips in your TV.
 
 ![Breadbee number one](photos/jackside_small.jpg)
@@ -35,7 +36,7 @@ These are features that are working:
 - On die temperature sensor. (sorta)
 - Hardware RNG. (quality unknown)
 - SHA engine. (Runs, not wired to the kernel)
-- 8051(probably) low power mode management MCU. (sorta) Idle current is ~130ma, sleeping ~30ma, deep sleep ~12ma. Can probably be improved.
+- 8051(probably) low power mode management MCU. 
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
@@ -53,6 +54,16 @@ Clocking up to 1.1GHz works fine running dhrystone for hours but causes random l
 It's full of flashy magic!
 
 ![PWM blinky](blinky.gif)
+
+## Power consumption
+
+According to a Kyoritsu KEW 1062 inline with the vbus of a usb cable:
+
+| state        | Ethernet on | RTC wake | value |
+|--------------|-------------|----------|-------|
+| Booted idle  | yes         | N/A      | 138mA |
+| Booted idle  | no          | N/A      | 113mA |
+| Memory sleep |             | Yes      | 12mA  |
 
 ## Board Revisions
 
