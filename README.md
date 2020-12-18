@@ -36,7 +36,7 @@ These are features that are working:
 - On die temperature sensor. (sorta)
 - Hardware RNG. (quality unknown)
 - SHA engine. (Runs, not wired to the kernel)
-- 8051(probably) low power mode management MCU. 
+- 8051 "house keeping" MCU. (Basic remoteproc driver)
 
 [0] MStar says it's 800MHz but their own cpufreq code says they clock it to 1GHz
 Clocking up to 1.1GHz works fine running dhrystone for hours but causes random lock ups if the spi nor controller and ethernet are fighting for bus access.
